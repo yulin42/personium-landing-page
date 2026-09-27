@@ -1,6 +1,6 @@
 export const metadata = {
-  title: 'Personium',
-  description: 'It is the landing page for Personium Inc.',
+  title: { absolute: 'Hava AI' },
+  description: 'Hava AI is a calm reading app. Generate short posts on a theme, read them one at a time, and keep the ones you want.',
 }
 
 import Hero from '@/components/hero'

@@ -1,25 +1,3 @@
-import VideoThumb from '@/public/images/hero-image-01.jpg'
-import ModalVideo from '@/components/modal-video'
-function AppStoreButton() {
-    const appStoreURL = "https://apps.apple.com/app/idYourAppID"; // Replace with your app's URL
-
-    return (
-      <a href={appStoreURL} target="_blank" rel="noopener noreferrer" style={buttonStyle}>
-        Download on the App Store
-      </a>
-    );
-  }
-
-  const buttonStyle = {
-    display: 'inline-block',
-    backgroundColor: '#007aff',
-    color: 'white',
-    padding: '10px 20px',
-    textDecoration: 'none',
-    borderRadius: '5px',
-    fontSize: '16px',
-  };
-
 export default function Hero() {
   return (
     <section>
@@ -41,15 +19,15 @@ export default function Hero() {
         {/* Hero content */}
         <div className="relative pt-32 pb-10 md:pt-40 md:pb-16">
 
-          {/* Section header */}
           <div className="max-w-3xl mx-auto text-center pb-12 md:pb-16">
-            <h1 className="h2 mb-4" data-aos="fade-up">Reveal True You</h1>
-            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Personium is a place where you can carelessly show your true self. <br/> Personium is the antidote of the single-dimenional society.</p>
+            <h1 className="h2 mb-4" data-aos="fade-up">Thoughts, one screen at a time.</h1>
+            <p className="text-xl text-gray-400 mb-8" data-aos="fade-up" data-aos-delay="200">Hava AI is a calm reading app. Choose a theme, generate a set of short posts, and read them one at a time.</p>
             <div className="max-w-xs mx-auto sm:max-w-none sm:flex sm:justify-center">
               <div data-aos="fade-up" data-aos-delay="400">
                 <a className="btn text-white bg-purple-600 hover:bg-purple-700 w-full mb-4 sm:w-auto sm:mb-0" href="#0">Coming Soon</a>
               </div>
             </div>
+            <p className="text-sm text-gray-500 mt-8 tracking-wide" data-aos="fade-up" data-aos-delay="500">Reflection · Motivation · Discipline · Focus · Confidence · Philosophy</p>
           </div>
 
         </div>
