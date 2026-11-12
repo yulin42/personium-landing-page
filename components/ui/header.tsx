@@ -1,23 +1,16 @@
+'use client'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
+const links = [['Sigmood','/sigmood/'],['Introduction','/sigmood/introduction/'],['Support','/sigmood/support/']]
 export default function Header() {
-  return (
-    <header className="absolute w-full z-30">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-20">
-          <div className="shrink-0 mr-4">
-            <Link href="/" className="block font-bold text-gray-100" aria-label="Hava AI">
-              Hava AI
-            </Link>
-          </div>
-
-          <nav className="flex items-center">
-            <Link href="/support" className="text-sm font-medium text-gray-300 hover:text-white transition duration-150 ease-in-out">
-              Support
-            </Link>
-          </nav>
-        </div>
-      </div>
-    </header>
-  )
+  const path = (usePathname() || '/').replace(/\/$/, '')
+  return <header className="mast"><div className="wrap mast-inner">
+    <Link className="parent" href="/">
+      <svg width="22" height="25" viewBox="0 0 22 25" aria-hidden="true" fill="currentColor"><path d="M1 3h10l-4 4H1zm0 8h13l-4 4H1zm0 8h9l-4 4H1zM13 3h8l-4 4H9z"/></svg>Personium
+    </Link>
+    <nav aria-label="Main navigation">{links.map(([name,href]) =>
+      <Link key={href} href={href} aria-current={path === href.slice(0,-1) || path === '/support' && name === 'Support' ? 'page' : undefined}>{name}</Link>
+    )}</nav>
+  </div></header>
 }

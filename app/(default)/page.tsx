@@ -1,22 +1,3 @@
-export const metadata = {
-  title: { absolute: 'Hava AI' },
-  description: 'Hava AI is a calm reading app. Generate short posts on a theme, read them one at a time, and keep the ones you want.',
-}
-
-import Hero from '@/components/hero'
-import Features from '@/components/features'
-// import Newsletter from '@/components/newsletter'
-// import Zigzag from '@/components/zigzag'
-import Testimonials from '@/components/testimonials'
-
-export default function Home() {
-  return (
-    <>
-      <Hero />
-      <Features />
-      {/* <Zigzag /> */}
-      {/* <Testimonials /> */}
-      {/* <Newsletter /> */}
-    </>
-  )
-}
+import Link from 'next/link'
+export const metadata = { title: {absolute:'Personium | Products'}, description:'Explore Sigmood, a reading app for iPhone from Personium.', alternates:{canonical:'/'} }
+export default function Home() {return <section className="wrap editorial"><p className="label">Personium / Products</p><h1>Personium<span className="dot">.</span></h1><article className="product-card"><img src="/sigmood/icon.png" alt="" width="82" height="82"/><div><h2>Sigmood</h2><p>Turn a thought into a few pages to read on iPhone.</p><Link className="action" href="/sigmood/">Explore Sigmood →</Link></div></article></section>}

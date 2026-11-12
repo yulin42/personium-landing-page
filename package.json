@@ -2,7 +2,7 @@
   "name": "landing-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://illezex.github.io/open-react-template",
+  "homepage": "https://personium.com/sigmood/",
   "scripts": {
     "dev": "next dev",
     "predeploy": "npm run build",

@@ -1,44 +1,14 @@
+import type { Metadata } from 'next'
 import './css/style.css'
-
-import { Inter, Architects_Daughter } from 'next/font/google'
-
+import './sigmood.css'
 import Header from '@/components/ui/header'
-import Banner from '@/components/banner'
+import Footer from '@/components/ui/footer'
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap'
-})
-
-const architects_daughter = Architects_Daughter({
-  subsets: ['latin'],
-  variable: '--font-architects-daughter',
-  weight: '400',
-  display: 'swap'
-})
-
-export const metadata = {
-  title: {
-    default: 'Hava AI',
-    template: '%s — Hava AI',
-  },
-  description: 'Hava AI is a calm reading app. Generate short posts on a theme, read them one at a time, and keep the ones you want.',
+export const metadata: Metadata = {
+  metadataBase: new URL('https://personium.com'),
+  title: { default: 'Personium', template: '%s · Personium' },
+  icons: { icon: '/sigmood/icon.png' },
 }
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
-  return (
-    <html lang="en">
-      <body className={`${inter.variable} ${architects_daughter.variable} font-inter antialiased bg-gray-900 text-gray-200 tracking-tight`}>
-        <div className="flex flex-col min-h-screen overflow-hidden">
-          <Header />
-          {children}
-        </div>
-      </body>
-    </html>
-  )
+export default function Layout({children}: {children: React.ReactNode}) {
+  return <html lang="en"><body className="publication"><a className="skip" href="#content">Skip to content</a><Header/><main id="content">{children}</main><Footer/></body></html>
 }
